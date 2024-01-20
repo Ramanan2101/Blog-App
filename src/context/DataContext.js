@@ -1,9 +1,6 @@
 import { createContext, useState, useEffect } from "react";
-import Post from "../Post";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import PostLayout from "../PostLayout";
+import { useNavigate } from "react-router-dom";
 import api from '../api/posts';
-import EditPost from "../EditPost";
 import useWindowSize from "../hooks/useWindowSize";
 
 
@@ -24,9 +21,6 @@ export const DataProvider = ({children}) =>{
     const [pageCount,setPageCount] = useState(2)
     const [hasMore, setHasMore] = useState(true)
     
-    // useEffect(() => {
-    //     setPosts(data);
-    // },[data])
 
     let limit=20;
 
@@ -34,8 +28,6 @@ export const DataProvider = ({children}) =>{
       const getPosts = async () => {
         try{
           const response = await api.get(`/posts?_page=1&_limit=${limit}`)
-        //   const total = response.headers.get('x-total-count')
-        //   setPageCount(Math.ceil(total/limit))
           setPosts(response.data);
           setFetchError(null)
         } catch (err) {
@@ -46,18 +38,6 @@ export const DataProvider = ({children}) =>{
       }
       getPosts();
     },[])
-
-    // useEffect(() => {
-    //     const filteredResults = posts.filter(post => 
-    //     ((post.body).toLowerCase()).includes(search.toLowerCase())
-    //     || ((post.title).toLowerCase()).includes(search.toLowerCase()));
-
-    //     setSearchResults(filteredResults)
-    //     // setSearchResults(filteredResults.reverse())
-    // },[posts,search]) 
-
-    //for lazy-loading scroll
-
     
     const fetchPosts = async () => {
         const response = await api.get(`posts?_page=${pageCount}&_limit=${limit}`);
@@ -73,25 +53,6 @@ export const DataProvider = ({children}) =>{
         if (postsFromServer.length === 0 || postsFromServer.length < `${limit}`) 
         {setHasMore(false)}
     }
-
-
-
-    //for Pagination 
-
-    // const fetchData = async (currentPage) => {
-    //     const response = await api.get(`/posts?_page=${currentPage}&_limit=${limit}`)
-    //     return response.data;
-    //     console.log('hello');
-    // }
-
-    // const handlePageClick = async (data) => {
-    //     console.log(data.selected);
-    //     let currentPage = data.selected + 1;
-    //     const postsFromServer = await fetchData(currentPage)
-    //     setPosts(postsFromServer)
-    // }
-
-    // Pagination Code ends
 
 
     const handleSubmit =async (e) =>{
@@ -137,7 +98,7 @@ export const DataProvider = ({children}) =>{
         <DataContext.Provider value={{width, search, setSearch, searchResults, fetchError, isLoading, 
             handleSubmit, postBody, setPostBody, postTitle, setPostTitle, posts, 
             handleEdit, editTitle, setEditTitle, editBody, setEditBody, handleDelete, pageCount, hasMore, setHasMore,
-            fetchMoreData, hasMore}}>
+            fetchMoreData}}>
             {children}
         </DataContext.Provider>
     )
