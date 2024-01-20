@@ -6,15 +6,8 @@ import EditPost from "./EditPost";
 import PostPage from "./PostPage";
 import About from "./About";
 import Missing from "./Missing";
-import Footer from "./Footer";
-import Post from "./Post";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import PostLayout from "./PostLayout";
-import React, { Suspense, useContext, useEffect, useState } from "react";
-import api from './api/posts';
-import useWindowSize from "./hooks/useWindowSize";
+import { Route, Routes } from "react-router-dom";
 import { DataProvider } from "./context/DataContext";
-import Pagination from "./Pagination";
 
 function App() {
 
@@ -31,7 +24,6 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path="*" element={<Missing />}/>
         </Routes>
-        {/* <Footer/> */}
       </DataProvider>
       
       
@@ -41,3 +33,4 @@ function App() {
 }
 
 export default App;
+

@@ -1,10 +1,7 @@
 import React, { useContext } from 'react'
 import Feed from './Feed'
 import DataContext from './context/DataContext'
-// import Pagination from './Pagination';
-
 import InfiniteScroll from 'react-infinite-scroll-component';
-import posts from './api/posts';
 
 const Home = () => {
   const {posts, searchResults, fetchError, isLoading, fetchMoreData, hasMore} = useContext(DataContext);
@@ -25,10 +22,6 @@ const Home = () => {
             <Feed posts={posts}/>
           </InfiniteScroll>
           :<p className='statusMsg'>No posts to display.</p> )}
-
-
-
-      {/* <Pagination /> */}
 
     </main>
   )
