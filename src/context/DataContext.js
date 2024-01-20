@@ -22,7 +22,7 @@ export const DataProvider = ({children}) =>{
     const [hasMore, setHasMore] = useState(true)
     
 
-    let limit=20;
+    const limit=20;
 
     useEffect(() =>{
       const getPosts = async () => {

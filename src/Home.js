@@ -4,7 +4,7 @@ import DataContext from './context/DataContext'
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Home = () => {
-  const {posts, searchResults, fetchError, isLoading, fetchMoreData, hasMore} = useContext(DataContext);
+  const {posts, fetchError, isLoading, fetchMoreData, hasMore} = useContext(DataContext);
   
 
   return (
