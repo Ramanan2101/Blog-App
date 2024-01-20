@@ -1,28 +1,22 @@
 {
   "posts": [
     {
-      "id": 2,
-      "title": "Second post",
-      "datetime": "July 16, 2021 11:47:48 AM",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. two"
-    },
-    {
-      "id": 3,
-      "title": "Number Three",
-      "datetime": "July 16, 2021 11:48:01 AM",
-      "body": "Third post... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
       "id": 4,
       "title": "Testing a 4th post",
-      "datetime": "August 09, 2021 4:44:22 PM",
-      "body": "Some more testing words"
+      "datetime": "December 30, 2023 3:03:26 PM",
+      "body": "just changing content for testing"
     },
     {
       "id": 5,
       "title": "My 5th post",
-      "datetime": "November 04, 2023 3:42:16 PM",
-      "body": "to test more and more"
+      "datetime": "December 30, 2023 3:02:52 PM",
+      "body": "changed the content"
+    },
+    {
+      "id": 6,
+      "title": "sample",
+      "datetime": "December 30, 2023 3:03:52 PM",
+      "body": "to check working"
     }
   ]
 }

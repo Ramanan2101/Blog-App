@@ -16,7 +16,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  background-color: #efefef;
+  /* background-color: #efefef; */
+  background-color: white;
 }
 
 #root {
@@ -28,16 +29,23 @@ body {
 
 .App {
   width: 100%;
-  max-width: 800px;
-  height: 100vh;
+  /* max-width: 800px; */
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border: 1px solid #333;
   box-shadow: 0px 0px 15px gray;
+  padding-top: 150px;
+  /* margin-bottom: 50px; */
 }
 
+
+.Header{
+  position: fixed;
+  top: 0px;
+}
 .Header, .Footer {
   width: 100%;
   background-color: #66d8f5;
@@ -59,6 +67,8 @@ body {
   padding: 0.75rem;
   display: grid;
   place-content: center;
+  position: fixed;
+  bottom: 0;
 }
 
 .Nav {
@@ -68,6 +78,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  position: fixed;
+  top: 50px;
 }
 
 .searchForm {
@@ -129,16 +141,26 @@ body {
   width: 100%;
   flex-grow: 1;
   padding: 1rem;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   background-color: #fff;
+  
 }
 
+.Home{
+  height: 100%;
+}
+/* .post{
+  overflow-y: auto;
+} */
 .post {
   margin-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid lightgray;
 }
 
+InfiniteScroll{
+  background-color: green;
+}
 .Home .post a {
   text-decoration: none;
 }
@@ -220,9 +242,9 @@ body {
   margin-top: 2rem;
 }
 
-@media only screen and (min-width: 610px) {
+/* @media only screen and (min-width: 610px) {
   html {
-    font-size: 22px;
+    font-size: 12px;
   }
 
   .Header h1 {
@@ -234,6 +256,7 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    font-size: 24px;
   }
 
   .Nav ul {
@@ -268,4 +291,4 @@ body {
     font-size: 3rem;
   }
 
-}
+} */
